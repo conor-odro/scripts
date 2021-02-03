@@ -16,6 +16,11 @@ const getAuthCode = async ({ clientId, username, password }) => {
   const { searchParams } = new URL(response.url);
   const code = searchParams.get('code');
 
+  if (!code) {
+    console.debug({ response });
+    throw new Error('Failed to get Auth Code from response');
+  }
+
   return code;
 };
 
