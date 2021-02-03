@@ -1,5 +1,12 @@
 {
-  "dependencies": {},
+  "type": "module",
+  "scripts": {
+    "start:bullhorn-api": "node --es-module-specifier-resolution=node bullhorn-api/index.js"
+  },
+  "dependencies": {
+    "commander": "^7.0.0",
+    "node-fetch": "^2.6.1"
+  },
   "devDependencies": {
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
