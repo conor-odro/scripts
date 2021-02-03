@@ -11,7 +11,7 @@ const getAuthCode = async ({ clientId, username, password }) => {
 
   const response = await fetch(`https://auth.bullhornstaffing.com/oauth/authorize?${params}`);
 
-  if (!response || response.status !== 200) throw new Error('Failed to fetch AuthCode, please check parameters');
+  if (!response || response.status !== 200) throw new Error('Failed to fetch Auth Code, please check parameters');
 
   const { searchParams } = new URL(response.url);
   const code = searchParams.get('code');
